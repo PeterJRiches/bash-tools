@@ -2,7 +2,7 @@
 
 ##  +-----------------------------------+-----------------------------------+
 ##  |                                                                       |
-##  | Copyright (c) 2019-2023, Andres Gongora <mail@andresgongora.com>.     |
+##  | Copyright (c) 2019-2026, Andres Gongora <mail@andresgongora.com>.     |
 ##  |                                                                       |
 ##  | This program is free software: you can redistribute it and/or modify  |
 ##  | it under the terms of the GNU General Public License as published by  |
@@ -15,7 +15,7 @@
 ##  | GNU General Public License for more details.                          |
 ##  |                                                                       |
 ##  | You should have received a copy of the GNU General Public License     |
-##  | along with this program. If not, see <http://www.gnu.org/licenses/>.  |
+##  | along with this program. If not, see <https://www.gnu.org/licenses/>.  |
 ##  |                                                                       |
 ##  +-----------------------------------------------------------------------+
 
@@ -24,12 +24,12 @@
 ##
 ##	This script takes a path name and shortens it.
 ##	- home is replaced by ~
-##	- last folder in apth is never truncated
+##	- the last folder in the path is never truncated
 ##
 ##
 ##	REFERENCES
 ##
-##	Original source: WOLFMAN'S color bash promt
+##	Original source: WOLFMAN'S color Bash prompt
 ##	https://wiki.chakralinux.org/index.php?title=Color_Bash_Prompt#Wolfman.27s
 ##
 
@@ -64,10 +64,10 @@ shortenPath()
 	local path=${path/#$HOME/\~}
 
 
-	## GET PRINT LENGHT
-	## - Get curred directory (last folder in path) to get its length (num characters).
+	## GET PRINT LENGTH
+	## - Get current directory (last folder in path) to get its length (number of characters).
 	## - Determine the actual max length we will use to truncate, choosing between either
-    ##   $max_length, set by the usert, or the length of the current dir,
+    ##   $max_length, set by the user, or the length of the current directory,
     ##   depending on which is greater. This ensures that even if we set a
     ##   relatively  low $max_length value, the name of the current dir will not
     ##   be truncated. Store in $print_length
@@ -78,7 +78,7 @@ shortenPath()
 
 
     ## TRUNCATE PATH TO
-	## - If $path_length > $print_lenght
+	## - If $path_length > $print_length
 	##	- Truncate the path to max_length
 	##	- Clean off path fragments before first '/' (included)
     ##  - Check if the bit we have removed would have landed at home

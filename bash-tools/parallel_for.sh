@@ -2,7 +2,7 @@
 
 ##  +-----------------------------------+-----------------------------------+
 ##  |                                                                       |
-##  | Copyright (c) 2019-2024, Andres Gongora <mail@andresgongora.com>.     |
+##  | Copyright (c) 2019-2026, Andres Gongora <mail@andresgongora.com>.     |
 ##  |                                                                       |
 ##  | This program is free software: you can redistribute it and/or modify  |
 ##  | it under the terms of the GNU General Public License as published by  |
@@ -15,7 +15,7 @@
 ##  | GNU General Public License for more details.                          |
 ##  |                                                                       |
 ##  | You should have received a copy of the GNU General Public License     |
-##  | along with this program. If not, see <http://www.gnu.org/licenses/>.  |
+##  | along with this program. If not, see <https://www.gnu.org/licenses/>.  |
 ##  |                                                                       |
 ##  +-----------------------------------------------------------------------+
 
@@ -41,7 +41,7 @@ parallelFor() {
 	local max_num_threads=$(nproc) # Num max threads
 
 	for argument in "${argument_list[@]}"; do
-		## WAIT IF TO MANY JOBS ALREADY RUNNIGN
+		## WAIT IF TOO MANY JOBS ARE ALREADY RUNNING
 		if [ $(jobs -r -p | wc -l) -ge $max_num_threads ]; then
 			wait -n # Wait only for first job
 		fi
@@ -94,6 +94,3 @@ parallelFor runTestJob "${param_array[@]}"
 echo "----------------------------------------"
 param_array=("one 1 a" "two 2 b" "three 3 c")
 parallelFor echo "${param_array[@]}"
-
-
-

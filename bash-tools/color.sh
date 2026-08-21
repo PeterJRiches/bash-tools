@@ -2,7 +2,7 @@
 
 ##  +-----------------------------------+-----------------------------------+
 ##  |                                                                       |
-##  | Copyright (c) 2019-2024, Andres Gongora <mail@andresgongora.com>.     |
+##  | Copyright (c) 2019-2026, Andres Gongora <mail@andresgongora.com>.     |
 ##  |                                                                       |
 ##  | This program is free software: you can redistribute it and/or modify  |
 ##  | it under the terms of the GNU General Public License as published by  |
@@ -15,7 +15,7 @@
 ##  | GNU General Public License for more details.                          |
 ##  |                                                                       |
 ##  | You should have received a copy of the GNU General Public License     |
-##  | along with this program. If not, see <http://www.gnu.org/licenses/>.  |
+##  | along with this program. If not, see <https://www.gnu.org/licenses/>.  |
 ##  |                                                                       |
 ##  +-----------------------------------------------------------------------+
 
@@ -36,7 +36,7 @@
 ##	USAGE
 ##	=====
 ##
-##	Formating a text directly:
+##	Formatting text directly:
 ##		FORMATTED_TEXT=$(formatText "Hi!" -c red -b 13 -e bold)
 ##		echo -e "$FORMATTED_TEXT"
 ##
@@ -62,12 +62,12 @@
 ##	character (commonly \e[), followed by one or more formatting codes
 ##	(its possible) to apply more that one color/effect at a time),
 ##	and finished by a lower case m. For example, the formatting code 1
-##	tells the terminal to print the text bold face. This is acchieved as:
+##	tells the terminal to print the text in bold. This is achieved as:
 ##		\e[1m Hello World!
 ##
-##	But if nothing else is specified, then eveything that may be printed
+##	But if nothing else is specified, then everything that may be printed
 ##	after 'Hello world!' will be bold face as well. The code 0 is thus
-##	meant to remove all formating from the text and return to normal:
+##	meant to remove all formatting from the text and return to normal:
 ##		\e[1m Hello World! \e[0m
 ##
 ##	It's also possible to paint the text in color (codes 30 to 37 and
@@ -101,7 +101,7 @@
 ##	TODO: Improve this description/manual text
 ##
 ##	TODO: Currently, if only one parameter is passed, its treated as a
-##	color. Addsupport to also detect whether its an effect code.
+##	color. Add support to also detect whether it's an effect code.
 ##		Now: getFormatCode blue == getFormatCode -c blue
 ##		Add: getFormatCode bold == getFormatCode -e bold
 ##
@@ -199,7 +199,7 @@ getColorCode()
 		else
 			echo 0
 		fi
-	## Or if color key-workd
+	## Or if color keyword
 	else
 		BITCODE=$(get8bitCode $COLOR)
 		COLORCODE=$(($BITCODE + 30))
@@ -222,7 +222,7 @@ getBackgroundCode()
 		else
 			echo 0
 		fi
-	## Or if color key-workd
+	## Or if color keyword
 	else
 		BITCODE=$(get8bitCode $COLOR)
 		COLORCODE=$(($BITCODE + 40))

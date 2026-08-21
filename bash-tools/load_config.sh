@@ -2,7 +2,7 @@
 
 ##  +-----------------------------------+-----------------------------------+
 ##  |                                                                       |
-##  | Copyright (c) 2019-2024, Andres Gongora <mail@andresgongora.com>.     |
+##  | Copyright (c) 2019-2026, Andres Gongora <mail@andresgongora.com>.     |
 ##  |                                                                       |
 ##  | This program is free software: you can redistribute it and/or modify  |
 ##  | it under the terms of the GNU General Public License as published by  |
@@ -15,7 +15,7 @@
 ##  | GNU General Public License for more details.                          |
 ##  |                                                                       |
 ##  | You should have received a copy of the GNU General Public License     |
-##  | along with this program. If not, see <http://www.gnu.org/licenses/>.  |
+##  | along with this program. If not, see <https://www.gnu.org/licenses/>.  |
 ##  |                                                                       |
 ##  +-----------------------------------------------------------------------+
 
@@ -25,13 +25,13 @@
 ##
 ##	Iterate through the configuration file searching for lines
 ##	containing key-parameter pairs. If there is a variable in the scripts
-##	scope with the same name as the key, it will write to it the value
+##	scope with the same name as the key, it will write the value to it
 ##	of the configuration parameter.
 ##
 ##	Very simple script to load configuration parameters into other scripts.
 ##	It can be used to retrieve all sorts of variables from a configuration
 ##	file, such that a script and its configuration parameters may be kept
-##	in completely separated file.
+##	in completely separate files.
 ##
 ##	Nonetheless, to (i) enforce the user to write resilient scripts,
 ##	and to (ii) avoid unintentional leakage of variable into the users'
@@ -46,7 +46,7 @@
 ##		user_number 7
 ##		user_string "Hello"
 ##
-##	Then, its possible to write the following script:
+##	Then, it's possible to write the following script:
 ##
 ##		## DECLARE VARIABLES AND SET DEFAULT VALUES
 ##		local my_var=1
@@ -74,7 +74,7 @@
 ##
 ##	* Empty lines and comments (starting with #) are ignored.
 ##
-##	* A KEY-VALUE pair might be followd by a comment (again,
+##	* A KEY-VALUE pair might be followed by a comment (again,
 ##	  starting with #) which will be trimmed before loading the data.
 ##
 ##
@@ -116,7 +116,7 @@ loadConfigFile() {
 
 		## CHECK IF MULTILINE
 		## - Search for valid termination
-		## - Signal multiline: tis is not used immediately, but
+		## - Signal multiline: this is not used immediately, but
 		##   at the end of the while loop.
 		local line_end_trimmed=$(echo "$line" | sed -n 's/[ \t]*\\$//p')
 		if [ -z "$line_end_trimmed" ]; then
@@ -141,7 +141,7 @@ loadConfigFile() {
 			## - Get key as first parameter
 			## - Evaluate current value of key
 			##   - Delete key name from line
-			##   - Remove other auxiliar/optional characters
+			##   - Remove other auxiliary/optional characters
 			local config_key_name=$1
 			local config_param=$(echo "$line" |\
 			                     sed -e "s/$config_key_name\s*//g" |\

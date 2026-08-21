@@ -2,7 +2,7 @@
 
 ##  +-----------------------------------+-----------------------------------+
 ##  |                                                                       |
-##  | Copyright (c) 2019-2024, Andres Gongora <mail@andresgongora.com>.     |
+##  | Copyright (c) 2019-2026, Andres Gongora <mail@andresgongora.com>.     |
 ##  |                                                                       |
 ##  | This program is free software: you can redistribute it and/or modify  |
 ##  | it under the terms of the GNU General Public License as published by  |
@@ -15,7 +15,7 @@
 ##  | GNU General Public License for more details.                          |
 ##  |                                                                       |
 ##  | You should have received a copy of the GNU General Public License     |
-##  | along with this program. If not, see <http://www.gnu.org/licenses/>.  |
+##  | along with this program. If not, see <https://www.gnu.org/licenses/>.  |
 ##  |                                                                       |
 ##  +-----------------------------------------------------------------------+
 
@@ -29,14 +29,14 @@
 ##	s/[]\/$*.^|[]/\\&/g     Replace all "special" characters with a version
 ##	                        with an extra \ in front. But because we can
 ##	                        just write \, we have to write \\. Finally,
-##				& becomes whatever character has ben matched.
+##				& becomes whatever character has been matched.
 ##				As for the match, surrounding everything with
 ##				[] is a wildcard to match any.
 ##
 ##	s/[\n\t]$//g		Get rid of very last \n or \t (end of line)
 ##
 ##	s/[\n\t]/\\\\\\&/g      Replace any new-line or tab with a version
-##	                        with extra dashes in front. These are necesary
+##	                        with extra dashes in front. These are necessary
 ##	                        because some get lost when the variable expands
 ##	                        into subsequent seds.
 ##
@@ -92,6 +92,3 @@ editTextFile()
 }
 
 ##################
-
-
-

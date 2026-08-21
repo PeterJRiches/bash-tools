@@ -2,7 +2,7 @@
 
 ##  +-----------------------------------+-----------------------------------+
 ##  |                                                                       |
-##  | Copyright (c) 2019-2024, Andres Gongora <mail@andresgongora.com>.     |
+##  | Copyright (c) 2019-2026, Andres Gongora <mail@andresgongora.com>.     |
 ##  |                                                                       |
 ##  | This program is free software: you can redistribute it and/or modify  |
 ##  | it under the terms of the GNU General Public License as published by  |
@@ -15,7 +15,7 @@
 ##  | GNU General Public License for more details.                          |
 ##  |                                                                       |
 ##  | You should have received a copy of the GNU General Public License     |
-##  | along with this program. If not, see <http://www.gnu.org/licenses/>.  |
+##  | along with this program. If not, see <https://www.gnu.org/licenses/>.  |
 ##  |                                                                       |
 ##  +-----------------------------------------------------------------------+
 
@@ -28,8 +28,8 @@
 ##
 ##	This script contains two functions:
 ##	- include()
-##		is meant to be used by stripts that want to source other
-##		script that may contain functions it needs.
+##		is meant to be used by scripts that want to source other
+##		scripts that may contain functions they need.
 ##
 ##	- assembleScript()
 ##		takes an input script, and output script, and an optional
@@ -78,7 +78,7 @@
 ##		if :
 ##			'cd' to dir containing the script that invokes 'include' for the
 ##			first time, then call 'include' again to recursively source all
-##			target scripts using relative paths, finally restore orignial 'PWD'.
+##			target scripts using relative paths, finally restore the original 'PWD'.
 ##
 ##			1. If '_IR' (include recursiverly) has never been set, use it to
 ##			   store the current 'PWD'.
@@ -113,7 +113,7 @@
 ## Arguments
 ## 1. input script
 ## 2. output script (will be overwritten)
-## 3. optional header (a text string) to put at the beguining of the output file
+## 3. optional header (a text string) to put at the beginning of the output file
 ##
 assembleScript()
 {
